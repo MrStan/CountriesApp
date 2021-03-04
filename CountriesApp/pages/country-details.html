@@ -1,0 +1,63 @@
+<div class="back-button">
+  <a href back-button><img src="icon/backBtn.svg" height="12" /> Back</a>
+</div>
+<div class="country-details-card">
+  <div class="details-card">
+    <div class="image-container">
+      <img ng-src="{{result.flag}}" width="100%" />
+    </div>
+    <table class="details-container">
+      <tr>
+        <th colspan="2"><h2>{{ result.name }}</h2></th>
+      </tr>
+      <tr>
+        <td><label>Capital: </label></td>
+        <td><h3>{{ result.capital }}</h3></td>
+      </tr>
+      <tr>
+        <td><label>Population:</label></td>
+        <td><h3>{{ result.population }}</h3></td>
+      </tr>
+      <tr>
+        <td><label>Curency:</label></td>
+        <td>
+          <div ng-repeat="currency in result.currencies">
+            <h4>{{currency.code}} | {{currency.name}} | {{currency.symbol}}</h4>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td><label>Language:</label></td>
+        <td>
+          <div ng-repeat="language in result.languages">
+            <h4>{{language.name}} | {{language.nativeName}} | {{language.iso639_1}}</h4></tr>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+    <div class="borders-card">
+      <h3>Bordering Countries of {{ result.name }}</h3>
+      <div class="bordering-countries-card">
+        <div class="border-countries" ng-repeat="neighbour in borderingCountries">
+          <a href="/{{ neighbour.name }}" title="{{ neighbour.name }}" alt="{{ neighbour.name }}">
+            <table>
+              <tr>
+                <td>
+                  <div class="image-wrapper">
+                    <img ng-src="{{neighbour.flag}}" width="100%";/></td>
+                  </div>
+              </tr>
+              <tr>
+                <td><h4>{{ neighbour.name }}</h4></td>
+              </tr>
+              <tr>
+                <td><label>Population</label><h4>{{ neighbour.population }}</h4></td>
+              </tr>
+            </table>
+          </a>
+        </div>
+      </div>
+    </div>
+</div>
+

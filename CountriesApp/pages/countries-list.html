@@ -1,0 +1,26 @@
+<input type="text" class="form-control" ng-model="search" value="Filter Countries" />
+<div class="countries-list">
+  <div class="cards" ng-repeat="result in results | filter:search">
+    <div class="card">
+      <a href="/{{ result.name }}">
+        <div class="img-container">
+          <img ng-src="{{result.flag}}" />
+        </div>
+        <table>
+          <tr>
+            <td><label>Country Name:</label></td>
+            <td><h2>{{ result.name }}</h2></td>
+          </tr>
+          <tr>
+            <td><label>Country Capital:</label></td>
+            <td><h3>{{ result.capital }}</h3></td>
+          </tr>
+          <tr>
+            <td><label>Population:</label></td>
+            <td><h3>{{ result.population }}</h3></td>
+          </tr>
+        </table>
+      </a>
+    </div>
+  </div>
+</div>
