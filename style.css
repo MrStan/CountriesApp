@@ -71,6 +71,7 @@ h3 {
   font-weight: 600;
 }
 .card table {
+  font-size: 90%;
   width: 100%;
 }
 .card label {
@@ -115,6 +116,8 @@ h3 {
   flex-direction: column;
   position: relative;
   max-width: 450px;
+  border: 1px solid rgb(230 230 230);
+  padding: 2em;
 }
 .details-container {
   width: 100%;
@@ -136,6 +139,10 @@ h4 {
   flex-direction: column;
   position: relative;
 }
+.border-countries {
+  border: 1px solid rgb(230 230 230);
+  padding: 2px;
+}
 .bordering-countries-card {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
@@ -149,7 +156,7 @@ h3 {
   font-weight: 600;
 }
 .bordering-countries-card h4 {
-    text-align: center;
+  text-align: center;
 }
 .bordering-countries-card table {
   width: 100%;
